@@ -70,6 +70,4 @@ The Streamlit app will open in your browser.
 ## Future Improvements
 
 - Add user authentication for secure access.
-- Support additional document formats (e.g., PDF, DOCX).
-- Upload documents directly from the UI.
 - Deploy to cloud platforms (AWS, Azure, HuggingFace Spaces).
