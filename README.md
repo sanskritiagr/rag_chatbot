@@ -1,111 +1,75 @@
-RAG Chatbot
-===========
+# RAG Chatbot
 
-A simple Retrieval-Augmented Generation (RAG) based chatbot that answers questions by retrieving information from a set of documents and using a language model to generate human-like responses.
+A simple Retrieval-Augmented Generation (RAG) based chatbot that answers questions by retrieving information from documents and generating human-like responses.
 
-✨ Features
-----------
+## Features
 
-*   **Document-based Question Answering:** Ask questions based on your documents.
-    
-*   **Vector Store:** Store document embeddings for fast and efficient retrieval.
-    
-*   **Streamlit Interface:** User-friendly web interface for interaction.
-    
-*   **Modular Structure:** Easy to extend and customize.
-    
+- Document-based Question Answering: Ask questions based on your own documents.
+- Vector Store: Store document embeddings for efficient retrieval.
+- Streamlit Interface: Simple web interface for interaction.
+- Modular Structure: Easy to extend and customize.
 
-🛠️ How It Works
-----------------
+## How It Works
 
-1.  **Load Documents:**
-    
-    *   Documents are loaded from the docs folder.
-        
-2.  **Chunking:**
-    
-    *   Documents are split into smaller chunks for better embedding and retrieval.
-        
-3.  **Embedding:**
-    
-    *   Chunks are converted into embeddings using a model (like OpenAI Embeddings or HuggingFace models).
-        
-4.  **Store in Vector Database:**
-    
-    *   Embeddings are stored in a FAISS vector store for similarity search.
-        
-5.  **RAG Pipeline:**
-    
-    *   Retrieve relevant chunks based on user query.
-        
-    *   Generate answer using a language model (LLM).
-        
+1. Load documents from the `docs` folder.
+2. Split documents into smaller chunks.
+3. Embed the chunks using a language model.
+4. Store the embeddings in a FAISS vector database.
+5. Retrieve relevant chunks based on user queries.
+6. Generate answers using a language model.
 
-📂 Project Structure
---------------------
+## Project Structure
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   plaintextCopyEdit├── app.py            # Main Streamlit app  ├── model.py          # Contains core logic for loading, embedding, storing, and retrieving documents  ├── requirements.txt  # Required Python packages  ├── docs/             # Folder containing the documents  └── README.md         # Project documentation   `
+```
+├── app.py            # Main Streamlit app
+├── model.py          # Core logic for loading, embedding, storing, and retrieving documents
+├── requirements.txt  # Required Python packages
+├── docs/             # Folder containing documents
+└── README.md         # Project documentation
+```
 
-🚀 Getting Started
-------------------
+## Getting Started
 
-### 1\. Clone the repository
+### 1. Clone the repository
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopyEditgit clone https://github.com/sanskritiagr/rag_chatbot.git  cd rag_chatbot   `
+```bash
+git clone https://github.com/sanskritiagr/rag_chatbot.git
+cd rag_chatbot
+```
 
-### 2\. Install dependencies
+### 2. Install dependencies
 
-Make sure you have Python 3.8+ installed.Then install the required packages:
+Ensure Python 3.8 or higher is installed.
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopyEditpip install -r requirements.txt   `
+```bash
+pip install -r requirements.txt
+```
 
-### 3\. Run the application
+### 3. Run the application
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashCopyEditstreamlit run app.py   `
+```bash
+streamlit run app.py
+```
 
-This will start a local Streamlit server. Open the link shown in the terminal to interact with your chatbot!
+The Streamlit app will open in your browser.
 
-⚙️ Configuration
-----------------
+## Configuration
 
-*   Place your documents inside the docs folder.
-    
-*   Update model and API keys (if needed) inside model.py.
-    
-*   Customize chunk size, retrieval method, or embedding model as per your needs.
-    
+- Place your documents inside the `docs` folder.
+- Update the model or API keys inside `model.py` if necessary.
+- Customize the chunk size, retrieval method, or embedding model as needed.
 
-📚 Technologies Used
---------------------
+## Technologies Used
 
-*   **Python**
-    
-*   **Streamlit** – for the web UI
-    
-*   **FAISS** – for vector storage
-    
-*   **HuggingFace Transformers / OpenAI Embeddings** – for embedding
-    
-*   **LangChain** – to streamline the RAG pipeline
-    
+- Python
+- Streamlit
+- FAISS
+- HuggingFace Transformers or OpenAI Embeddings
+- LangChain
 
-💡 Future Improvements
-----------------------
+## Future Improvements
 
-*   Add authentication for secure access.
-    
-*   Support for multi-document types (PDF, txt, etc.).
-    
-*   Option to upload documents directly from the UI.
-    
-*   Deployment on cloud platforms (like AWS, Azure, or HuggingFace Spaces).
-    
-
-🙌 Acknowledgements
--------------------
-
-*   [LangChain](https://github.com/langchain-ai/langchain)
-    
-*   [FAISS by Facebook AI](https://github.com/facebookresearch/faiss)
-    
-*   [Streamlit](https://streamlit.io/)
+- Add user authentication for secure access.
+- Support additional document formats (e.g., PDF, DOCX).
+- Upload documents directly from the UI.
+- Deploy to cloud platforms (AWS, Azure, HuggingFace Spaces).
